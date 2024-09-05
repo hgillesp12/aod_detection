@@ -57,12 +57,12 @@ def generate_launch_description():
        ),
 
         # Video Feed Node to process the camera feed
-        # Node(
-        #     package='drone_video_feed',
-        #     executable='video_feed_node',
-        #     name='video_feed_node',
-        #     output='screen'
-        # ),
+        Node(
+            package='drone_video_feed',
+            executable='video_feed_node',
+            name='video_feed_node',
+            output='screen'
+        ),
 
         # RViz Node to visualize the processed camera feed
         Node(

@@ -1,7 +1,0 @@
-setuptools
-rclpy
-sensor_msgs
-cv_bridge
-torch
-opencv-python
-ultralytics
