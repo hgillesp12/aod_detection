@@ -1,0 +1,3 @@
+[console_scripts]
+quadcopter_controller = drone_video_feed.quadcopter_controller:main
+video_feed_node = drone_video_feed.video_feed_node:main

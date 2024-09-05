@@ -1,0 +1,29 @@
+[0.552s] Invoking command in '/Users/hannahgillespie/aod_detection/ros2_ws/src/drone_video_feed': CONDA_PROMPT_MODIFIER=(ros2_env) PYTHONPATH=/Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/prefix_override:/Users/hannahgillespie/miniconda3/envs/ros2_env/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages:${PYTHONPATH} SHLVL=3 _=/Users/hannahgillespie/miniconda3/envs/ros2_env/bin/env __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0 /Users/hannahgillespie/miniconda3/envs/ros2_env/bin/python3.10 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/drone_video_feed build --build-base /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build install --record /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/install.log --single-version-externally-managed install_data
+[0.697s] running egg_info
+[0.704s] writing ../../build/drone_video_feed/drone_video_feed.egg-info/PKG-INFO
+[0.704s] writing dependency_links to ../../build/drone_video_feed/drone_video_feed.egg-info/dependency_links.txt
+[0.705s] writing entry points to ../../build/drone_video_feed/drone_video_feed.egg-info/entry_points.txt
+[0.705s] writing requirements to ../../build/drone_video_feed/drone_video_feed.egg-info/requires.txt
+[0.705s] writing top-level names to ../../build/drone_video_feed/drone_video_feed.egg-info/top_level.txt
+[0.721s] reading manifest file '../../build/drone_video_feed/drone_video_feed.egg-info/SOURCES.txt'
+[0.722s] writing manifest file '../../build/drone_video_feed/drone_video_feed.egg-info/SOURCES.txt'
+[0.722s] running build
+[0.722s] running build_py
+[0.722s] copying drone_video_feed/video_feed_node.py -> /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build/lib/drone_video_feed
+[0.723s] copying drone_video_feed/quadcopter_controller.py -> /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build/lib/drone_video_feed
+[0.723s] copying drone_video_feed/__init__.py -> /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build/lib/drone_video_feed
+[0.723s] running install
+[0.727s] running install_lib
+[0.735s] running install_data
+[0.735s] copying resource/drone_video_feed -> /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/share/ament_index/resource_index/packages
+[0.735s] copying package.xml -> /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/share/drone_video_feed
+[0.736s] copying launch/launch.py -> /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/share/drone_video_feed/launch
+[0.736s] copying config/quadcopter_camera.rviz -> /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/share/drone_video_feed/config
+[0.736s] running install_egg_info
+[0.745s] removing '/Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages/drone_video_feed-0.0.1-py3.10.egg-info' (and everything under it)
+[0.746s] Copying ../../build/drone_video_feed/drone_video_feed.egg-info to /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages/drone_video_feed-0.0.1-py3.10.egg-info
+[0.748s] running install_scripts
+[0.817s] Installing quadcopter_controller script to /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/drone_video_feed
+[0.817s] Installing video_feed_node script to /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/drone_video_feed
+[0.817s] writing list of installed files to '/Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/install.log'
+[0.831s] Invoked command in '/Users/hannahgillespie/aod_detection/ros2_ws/src/drone_video_feed' returned '0': CONDA_PROMPT_MODIFIER=(ros2_env) PYTHONPATH=/Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/prefix_override:/Users/hannahgillespie/miniconda3/envs/ros2_env/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages:${PYTHONPATH} SHLVL=3 _=/Users/hannahgillespie/miniconda3/envs/ros2_env/bin/env __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0 /Users/hannahgillespie/miniconda3/envs/ros2_env/bin/python3.10 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/drone_video_feed build --build-base /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build install --record /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/install.log --single-version-externally-managed install_data

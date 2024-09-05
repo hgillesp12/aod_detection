@@ -1,35 +1,35 @@
 #!/bin/bash
 
-# Initialize Conda for the current shell
-echo "Initializing Conda for the current shell..."
-conda init "$(basename "$SHELL")"
+# Check for existing Conda environment and create if necessary
+if conda info --envs | grep -q "ros_env"; then
+  echo "ROS environment 'ros_env' already exists. Activating..."
+  mamba activate ros_env
+else
+  echo "Creating and activating ROS environment..."
+  mamba create -n ros_env python=3.10 -y
+  mamba activate ros_env
+fi
 
-# Reload the shell to apply changes from conda init
-echo "Reloading the shell to apply changes..."
-source ~/.bashrc  # Adjust this for your shell, e.g., ~/.zshrc for zsh
-
-# Create and activate ROS environment
-echo "Creating and activating ROS environment..."
-conda create -n ros_env python=3.10 -y
-conda activate ros_env
-
-# Add channels and turn off the default one
-echo "Configuring conda channels..."
+# Add channels
+echo "Adding robostack channels..."
+# this adds the conda-forge channel to the new created environment configuration 
 conda config --env --add channels conda-forge
+# and the robostack channel
 conda config --env --add channels robostack-staging
+# remove the defaults channel just in case, this might return an error if it is not in the list which is ok
 conda config --env --remove channels defaults
 
-# Install ROS 2 desktop
+# Install ROS 2 Humble desktop
 echo "Installing ROS 2 Humble desktop..."
-conda install ros-humble-desktop -y
+mamba install ros-humble-desktop -y
 
 # Install additional development tools
 echo "Installing additional tools for development..."
-conda install compilers cmake pkg-config make ninja colcon-common-extensions catkin_tools rosdep -y
+mamba install compilers cmake pkg-config make ninja colcon-common-extensions catkin_tools rosdep -y
 
 # Install Gazebo packages
 echo "Installing Gazebo packages..."
-conda install ros-humble-gazebo-ros-pkgs ros-humble-gazebo-ros -y
+mamba install ros-humble-gazebo-ros-pkgs ros-humble-gazebo-ros -y
 
 # Install additional Python packages
 echo "Installing Python packages for ultralytics..."
@@ -40,34 +40,21 @@ pip install numpy opencv-python pandas ultralytics
 echo "Setting up the environment script for ROS 2..."
 cat << EOF > install/setup.bash
 # Environment setup script generated for ROS 2 and Gazebo compatibility
-# This script extends the environment with the environment of other prefix
-# paths which were sourced when this file was generated as well as all packages
-# contained in this prefix path.
 
-# function to source another script with conditional trace output
-# first argument: the path of the script
-_colcon_prefix_chain_bash_source_script() {
-  if [ -f "$1" ]; then
-    if [ -n "$COLCON_TRACE" ]; then
-      echo "# . \"$1\""
-    fi
-    . "$1"
-  else
-    echo "not found: \"$1\"" 1>&2
-  fi
-}
+# Source local setup script if exists
+if [ -f "\$(dirname "\${BASH_SOURCE[0]}")/local_setup.bash" ]; then
+  source "\$(dirname "\${BASH_SOURCE[0]}")/local_setup.bash"
+fi
 
-# Optional: Adjust or comment out this section if sourcing from the Conda environment causes issues
-# COLCON_CURRENT_PREFIX="/Users/hannahgillespie/miniconda3/envs/ros_env"
-# _colcon_prefix_chain_bash_source_script "$COLCON_CURRENT_PREFIX/local_setup.bash"
-
-# Correctly source this prefix (workspace's install directory)
-# setting COLCON_CURRENT_PREFIX avoids determining the prefix in the sourced script
-COLCON_CURRENT_PREFIX="$(builtin cd "`dirname "${BASH_SOURCE[0]}"`" > /dev/null && pwd)"
-_colcon_prefix_chain_bash_source_script "$COLCON_CURRENT_PREFIX/local_setup.bash"
-
-unset COLCON_CURRENT_PREFIX
-unset _colcon_prefix_chain_bash_source_script
 EOF
 
 echo "Setup completed. Your ROS environment is ready."
+
+# Verify final configuration
+echo "Verifying ROS environment setup..."
+echo "Active Conda Environment: $(conda info --envs | grep \*)"
+echo "ROS_DISTRO: $ROS_DISTRO"
+echo "RMW_IMPLEMENTATION: $RMW_IMPLEMENTATION"
+
+# Test ROS 2 installation
+ros2 topic list
