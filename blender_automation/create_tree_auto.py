@@ -8,15 +8,15 @@ from datetime import datetime
 ### Parameters
 N_TREES = 1
 NODE_NAME = "tree_node"
-OUTPUT_IMG_DIRECTORY = "/Users/hannahgillespie/Downloads/bark/renderings/images"  # images composed of trunk + background
-OUTPUT_LBL_DIRECTORY = "/Users/hannahgillespie/Downloads/bark/renderings/labels" # YOLO formatted labels
-BACKGROUND_DIRECTORY = "/Users/hannahgillespie/Downloads/bark/backgrounds"  # collection of random backgrounds
+OUTPUT_IMG_DIRECTORY = "/Users/hannahgillespie/aod_detection/blender_automation/bark/renderings/images"  # images composed of trunk + background
+OUTPUT_LBL_DIRECTORY = "/Users/hannahgillespie/aod_detection/blender_automation/bark/renderings/labels" # YOLO formatted labels
+BACKGROUND_DIRECTORY = "/Users/hannahgillespie/aod_detection/blender_automation/bark/backgrounds"  # collection of random backgrounds
 
 BARK_TEXTURE_FOLDERS = {
-    'low_risk_oak': "/Users/hannahgillespie/Downloads/bark/types/low_risk_oak/",
-    'medium_risk_oak': "/Users/hannahgillespie/Downloads/bark/types/medium_risk_oak/",
-    'high_risk_oak': "/Users/hannahgillespie/Downloads/bark/types/high_risk_oak/",
-    'non_oak': "/Users/hannahgillespie/Downloads/bark/types/non_oak/"
+    'low_risk_oak': "/Users/hannahgillespie/aod_detection/blender_automation/bark/types/low_risk_oak/",
+    'medium_risk_oak': "/Users/hannahgillespie/aod_detection/blender_automation/bark/types/medium_risk_oak/",
+    'high_risk_oak': "/Users/hannahgillespie/aod_detection/blender_automation/bark/types/high_risk_oak/",
+    'non_oak': "/Users/hannahgillespie/aod_detection/blender_automation/bark/types/non_oak/"
 }
 
 # Map class names to their YOLO format labels
