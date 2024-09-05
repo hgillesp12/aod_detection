@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: drone-video-feed
+Version: 0.0.1
+Summary: A ROS 2 package for drone video feed and machine learning processing
+Maintainer: Your Name
+Maintainer-email: your_email@example.com
+License: Apache-2.0
+Platform: UNKNOWN
+
+UNKNOWN
+

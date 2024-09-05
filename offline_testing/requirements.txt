@@ -1,0 +1,6 @@
+torch
+opencv-python
+mss
+numpy
+pandas
+requests

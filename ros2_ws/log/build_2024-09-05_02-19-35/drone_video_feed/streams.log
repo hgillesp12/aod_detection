@@ -1,0 +1,32 @@
+[1.328s] Invoking command in '/Users/hannahgillespie/aod_detection/ros2_ws/src/temp': CONDA_PROMPT_MODIFIER=(ros_env) PYTHONPATH=/Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/prefix_override:/Users/hannahgillespie/miniconda3/envs/ros_env/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages:${PYTHONPATH} SHLVL=2 _=/Users/hannahgillespie/miniconda3/envs/ros_env/bin/env __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0 /Users/hannahgillespie/miniconda3/envs/ros_env/bin/python3.10 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/drone_video_feed build --build-base /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build install --record /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/install.log --single-version-externally-managed install_data
+[1.940s] running egg_info
+[1.940s] creating ../../build/drone_video_feed/drone_video_feed.egg-info
+[1.986s] writing ../../build/drone_video_feed/drone_video_feed.egg-info/PKG-INFO
+[2.027s] writing dependency_links to ../../build/drone_video_feed/drone_video_feed.egg-info/dependency_links.txt
+[2.129s] writing entry points to ../../build/drone_video_feed/drone_video_feed.egg-info/entry_points.txt
+[2.198s] writing requirements to ../../build/drone_video_feed/drone_video_feed.egg-info/requires.txt
+[2.232s] writing top-level names to ../../build/drone_video_feed/drone_video_feed.egg-info/top_level.txt
+[2.232s] writing manifest file '../../build/drone_video_feed/drone_video_feed.egg-info/SOURCES.txt'
+[2.278s] package init file 'drone_video_feed/__init__.py' not found (or not a regular file)
+[2.290s] reading manifest file '../../build/drone_video_feed/drone_video_feed.egg-info/SOURCES.txt'
+[2.290s] writing manifest file '../../build/drone_video_feed/drone_video_feed.egg-info/SOURCES.txt'
+[2.290s] running build
+[2.291s] running build_py
+[2.291s] creating /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build
+[2.291s] creating /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build/lib
+[2.291s] creating /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build/lib/drone_video_feed
+[2.291s] copying drone_video_feed/video_feed_node.py -> /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build/lib/drone_video_feed
+[2.291s] copying drone_video_feed/quadcopter_controller.py -> /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build/lib/drone_video_feed
+[2.292s] running install
+[2.296s] running install_lib
+[2.343s] creating /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages/drone_video_feed
+[2.343s] copying /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build/lib/drone_video_feed/video_feed_node.py -> /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages/drone_video_feed
+[2.343s] copying /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build/lib/drone_video_feed/quadcopter_controller.py -> /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages/drone_video_feed
+[2.344s] byte-compiling /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages/drone_video_feed/video_feed_node.py to video_feed_node.cpython-310.pyc
+[2.345s] byte-compiling /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages/drone_video_feed/quadcopter_controller.py to quadcopter_controller.cpython-310.pyc
+[2.345s] running install_data
+[2.345s] creating /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/share/ament_index
+[2.346s] creating /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/share/ament_index/resource_index
+[2.346s] creating /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/share/ament_index/resource_index/packages
+[2.346s] error: can't copy 'resource/drone_video_feed': doesn't exist or not a regular file
+[2.364s] Invoked command in '/Users/hannahgillespie/aod_detection/ros2_ws/src/temp' returned '1': CONDA_PROMPT_MODIFIER=(ros_env) PYTHONPATH=/Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/prefix_override:/Users/hannahgillespie/miniconda3/envs/ros_env/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages:${PYTHONPATH} SHLVL=2 _=/Users/hannahgillespie/miniconda3/envs/ros_env/bin/env __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0 /Users/hannahgillespie/miniconda3/envs/ros_env/bin/python3.10 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/drone_video_feed build --build-base /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build install --record /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/install.log --single-version-externally-managed install_data

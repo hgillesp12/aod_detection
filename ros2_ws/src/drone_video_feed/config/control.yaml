@@ -1,0 +1,24 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+joint_state_broadcaster:
+  ros__parameters:
+    type: joint_state_broadcaster/JointStateBroadcaster
+    joints:
+      - base_link_joint
+
+velocity_controller:
+  ros__parameters:
+    type: velocity_controllers/JointTrajectoryController
+    joints:
+      - base_link_joint
+    gains:
+      base_link_joint:
+        p: 100.0
+        d: 1.0
+        i: 0.1
+    state_publish_rate: 50
+    command_interfaces:
+      - velocity
+    allow_partial_joints_goal: true
