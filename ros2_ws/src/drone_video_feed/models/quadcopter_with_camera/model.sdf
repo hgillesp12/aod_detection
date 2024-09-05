@@ -2,20 +2,16 @@
 <sdf version="1.6">
   <model name="quadcopter_with_camera">
 
-    <!-- Set the model to be dynamic -->
-    <static>false</static>
-
-    <!-- ROS 2 control plugin for Gazebo -->
+    <!-- ROS 2 control plugin -->
     <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
       <ros>
-        <namespace>/quadcopter_with_camera</namespace> <!-- Namespace for ROS topics and services -->
+        <namespace>/quadcopter_with_camera</namespace>
         <remapping>cmd_vel:=/quadcopter_with_camera/cmd_vel</remapping>
       </ros>
       <robotNamespace>/quadcopter_with_camera</robotNamespace>
-      <controlConfigFile>$(find quadcopter_description)/config/control.yaml</controlConfigFile> <!-- Path to the controller config file -->
+      <controlConfigFile>$(find quadcopter_description)/config/control.yaml</controlConfigFile>
     </plugin>
 
-    <!-- Main body link -->
     <link name="base_link">
       <!-- Inertial properties -->
       <inertial>
@@ -27,13 +23,12 @@
         </inertia>
       </inertial>
 
-      <!-- Visual representation -->
+      <!-- Visual representation of the quadcopter -->
       <visual name="quadcopter_visual">
         <geometry>
-          <mesh>
-            <uri>model://quadcopter_with_camera/meshes/quadcopter_body.dae</uri>
-            <scale>1.0 1.0 1.0</scale>
-          </mesh>
+          <box>
+            <size>0.5 0.5 0.1</size>
+          </box>
         </geometry>
         <material>
           <ambient>0.0 1.0 0.0 1.0</ambient>
@@ -41,13 +36,12 @@
         </material>
       </visual>
 
-      <!-- Collision properties -->
+      <!-- Collision properties of the quadcopter -->
       <collision name="quadcopter_collision">
         <geometry>
-          <mesh>
-            <uri>model://quadcopter_with_camera/meshes/quadcopter_body.dae</uri>
-            <scale>1.0 1.0 1.0</scale>
-          </mesh>
+          <box>
+            <size>0.5 0.5 0.1</size>
+          </box>
         </geometry>
         <surface>
           <contact>
@@ -82,14 +76,12 @@
         <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
           <ros>
             <namespace>/quadcopter_with_camera</namespace>
-            <remapping>image:=/quadcopter_with_camera/camera_sensor/image_raw</remapping>
+            <remapping>image_raw:=/drone/camera/image_raw</remapping> <!-- Remap the topic for the image feed -->
           </ros>
-          <cameraName>quadcopter_camera</cameraName>
+          <cameraName>camera_sensor</cameraName>
+          <frameName>camera_link</frameName>
         </plugin>
       </sensor>
     </link>
-
-    <!-- Add propellers, motors, and joints as needed -->
-
   </model>
 </sdf>

@@ -10,7 +10,7 @@ def generate_launch_description():
     gazebo_ros_path = '/Users/hannahgillespie/miniconda3/envs/ros_env/share/gazebo_ros'
 
     # World file path
-    world_file = '/Users/hannahgillespie/aod_detection/ros2_ws/src/drone_video_feed/worlds/base_world.world'
+    world_file = '/Users/hannahgillespie/aod_detection/ros2_ws/src/drone_video_feed/worlds/latest.world'
 
     # Model files paths
     quadcopter_model_file = '/Users/hannahgillespie/aod_detection/ros2_ws/src/drone_video_feed/models/quadcopter_with_camera/model.sdf'
@@ -45,24 +45,24 @@ def generate_launch_description():
         ),
 
         # Spawn the tree model in Gazebo
-        Node(
-            package='gazebo_ros',
-            executable='spawn_entity.py',
-            arguments=[
-                '-entity', 'blender_tree',
-                '-x', '10', '-y', '0', '-z', '0',  
-                '-file', tree_model_file
-            ],
-            output='screen'
-        ),
+       Node(
+           package='gazebo_ros',
+           executable='spawn_entity.py',
+           arguments=[
+               '-entity', 'blender_tree',
+               '-x', '10', '-y', '0', '-z', '0',  
+               '-file', tree_model_file
+           ],
+           output='screen'
+       ),
 
         # Video Feed Node to process the camera feed
-        Node(
-            package='drone_video_feed',
-            executable='video_feed_node',
-            name='video_feed_node',
-            output='screen'
-        ),
+        # Node(
+        #     package='drone_video_feed',
+        #     executable='video_feed_node',
+        #     name='video_feed_node',
+        #     output='screen'
+        # ),
 
         # RViz Node to visualize the processed camera feed
         Node(

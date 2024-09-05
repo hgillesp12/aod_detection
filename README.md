@@ -7,6 +7,7 @@ Thesis for detecting Acute Oak Decline (AOD) in oak trees across the UK using ob
 ```bash
 # create and activate ROS environment
 conda create -n ros_env python=3.10
+conda init
 conda activate ros_env
 
 # Add channels and turn off default one

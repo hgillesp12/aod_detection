@@ -1,11 +1,14 @@
 Metadata-Version: 2.1
-Name: drone-video-feed
+Name: drone_video_feed
 Version: 0.0.1
 Summary: A ROS 2 package for drone video feed and machine learning processing
 Maintainer: Your Name
 Maintainer-email: your_email@example.com
 License: Apache-2.0
-Platform: UNKNOWN
-
-UNKNOWN
-
+Requires-Dist: setuptools
+Requires-Dist: rclpy
+Requires-Dist: sensor_msgs
+Requires-Dist: cv_bridge
+Requires-Dist: torch
+Requires-Dist: opencv-python
+Requires-Dist: ultralytics

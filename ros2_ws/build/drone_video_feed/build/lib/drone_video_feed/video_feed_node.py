@@ -11,9 +11,9 @@ import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 # Load YOLOv5 model with custom weights
-model = torch.hub.load('src/drone_video_feed/drone_video_feed/model_information/yolov5', 
+model = torch.hub.load('/Users/hannahgillespie/aod_detection/model/yolov5', 
                        'custom', 
-                       path='src/drone_video_feed/drone_video_feed/model_information/best.pt', 
+                       path='/Users/hannahgillespie/aod_detection/model/best.pt', 
                        source='local')
 
 # Define custom colors for each class

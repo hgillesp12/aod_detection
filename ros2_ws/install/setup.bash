@@ -1,3 +1,5 @@
+# generated from colcon_bash/shell/template/prefix_chain.bash.em
+
 # This script extends the environment with the environment of other prefix
 # paths which were sourced when this file was generated as well as all packages
 # contained in this prefix path.
@@ -15,11 +17,12 @@ _colcon_prefix_chain_bash_source_script() {
   fi
 }
 
-# Optional: Adjust or comment out this section if sourcing from the Conda environment causes issues
-# COLCON_CURRENT_PREFIX="/Users/hannahgillespie/miniconda3/envs/ros_env"
-# _colcon_prefix_chain_bash_source_script "$COLCON_CURRENT_PREFIX/local_setup.bash"
+# source chained prefixes
+# setting COLCON_CURRENT_PREFIX avoids determining the prefix in the sourced script
+COLCON_CURRENT_PREFIX="/Users/hannahgillespie/miniconda3/envs/ros_env"
+_colcon_prefix_chain_bash_source_script "$COLCON_CURRENT_PREFIX/local_setup.bash"
 
-# Correctly source this prefix (workspace's install directory)
+# source this prefix
 # setting COLCON_CURRENT_PREFIX avoids determining the prefix in the sourced script
 COLCON_CURRENT_PREFIX="$(builtin cd "`dirname "${BASH_SOURCE[0]}"`" > /dev/null && pwd)"
 _colcon_prefix_chain_bash_source_script "$COLCON_CURRENT_PREFIX/local_setup.bash"
