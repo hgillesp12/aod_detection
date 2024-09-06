@@ -1,0 +1,43 @@
+running egg_info
+creating ../../build/drone_video_feed/drone_video_feed.egg-info
+writing ../../build/drone_video_feed/drone_video_feed.egg-info/PKG-INFO
+writing dependency_links to ../../build/drone_video_feed/drone_video_feed.egg-info/dependency_links.txt
+writing entry points to ../../build/drone_video_feed/drone_video_feed.egg-info/entry_points.txt
+writing requirements to ../../build/drone_video_feed/drone_video_feed.egg-info/requires.txt
+writing top-level names to ../../build/drone_video_feed/drone_video_feed.egg-info/top_level.txt
+writing manifest file '../../build/drone_video_feed/drone_video_feed.egg-info/SOURCES.txt'
+reading manifest file '../../build/drone_video_feed/drone_video_feed.egg-info/SOURCES.txt'
+writing manifest file '../../build/drone_video_feed/drone_video_feed.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build
+creating /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build/lib
+creating /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build/lib/drone_video_feed
+copying drone_video_feed/video_feed_node.py -> /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build/lib/drone_video_feed
+copying drone_video_feed/quadcopter_controller.py -> /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build/lib/drone_video_feed
+copying drone_video_feed/__init__.py -> /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build/lib/drone_video_feed
+running install
+running install_lib
+creating /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages/drone_video_feed
+copying /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build/lib/drone_video_feed/video_feed_node.py -> /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages/drone_video_feed
+copying /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build/lib/drone_video_feed/quadcopter_controller.py -> /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages/drone_video_feed
+copying /Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/build/lib/drone_video_feed/__init__.py -> /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages/drone_video_feed
+byte-compiling /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages/drone_video_feed/video_feed_node.py to video_feed_node.cpython-310.pyc
+byte-compiling /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages/drone_video_feed/quadcopter_controller.py to quadcopter_controller.cpython-310.pyc
+byte-compiling /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages/drone_video_feed/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/share/ament_index
+creating /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/share/ament_index/resource_index
+creating /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/share/ament_index/resource_index/packages
+copying resource/drone_video_feed -> /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/share/ament_index/resource_index/packages
+copying package.xml -> /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/share/drone_video_feed
+creating /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/share/drone_video_feed/launch
+copying launch/launch.py -> /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/share/drone_video_feed/launch
+creating /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/share/drone_video_feed/config
+copying config/quadcopter_camera.rviz -> /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/share/drone_video_feed/config
+running install_egg_info
+Copying ../../build/drone_video_feed/drone_video_feed.egg-info to /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/python3.10/site-packages/drone_video_feed-0.0.1-py3.10.egg-info
+running install_scripts
+Installing quadcopter_controller script to /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/drone_video_feed
+Installing video_feed_node script to /Users/hannahgillespie/aod_detection/ros2_ws/install/drone_video_feed/lib/drone_video_feed
+writing list of installed files to '/Users/hannahgillespie/aod_detection/ros2_ws/build/drone_video_feed/install.log'
