@@ -2,16 +2,16 @@ import cv2
 import os
 
 # Define paths to the directory containing images and YOLO label files
-image_directory = '/Users/hannahgillespie/Downloads/bark/renderings/images'  # Replace with the path to your images
-label_directory = '/Users/hannahgillespie/Downloads/bark/renderings/labels'  # Replace with the path to your YOLO label files
-output_directory = '/Users/hannahgillespie/Downloads/bark/renderings/output_images'  # Replace with the path to save images with bounding boxes
+image_directory = '/Users/hannahgillespie/aod_detection/blender_automation/bark/renderings/images'  # Replace with the path to your images
+label_directory = '/Users/hannahgillespie/aod_detection/blender_automation/bark/renderings/labels'  # Replace with the path to your YOLO label files
+output_directory = '/Users/hannahgillespie/aod_detection/blender_automation/bark/renderings/output_images'  # Replace with the path to save images with bounding boxes
 
 # Define colors for each class
 class_colors = {
-    3: (128, 128, 128),  # Grey for non_oak
     0: (0, 255, 0),      # Green for low_risk_oak
     1: (0, 255, 255),    # Yellow for medium_risk_oak
-    2: (0, 0, 255)       # Red for high_risk_oak
+    2: (0, 0, 255),       # Red for high_risk_oak
+    3: (128, 128, 128)  # Grey for non_oak
 }
 
 # Ensure the output directory exists

@@ -432,11 +432,11 @@ def create_n_random_trees(number_of_trees):
     for i in range(number_of_trees):
         node_group_name = NODE_NAME + "_" + str(i)
         delete_all_objects()
+        random.seed()
         tree, category = create_tree(node_group_name)
         n_cameras = int(random.uniform(1, 4))
         cameras = [create_random_camera(i) for i in range(n_cameras)]
         create_sun_light()
-
         render_from_cameras(cameras, tree, category)
         
 if __name__ == "__main__":
