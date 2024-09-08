@@ -1,2 +1,4 @@
 .venv
-/blender_automation/bark/renderings/
+/blender_automation/bark/renderings/images/
+/blender_automation/bark/renderings/labels/
+/blender_automation/bark/renderings/output_images/
