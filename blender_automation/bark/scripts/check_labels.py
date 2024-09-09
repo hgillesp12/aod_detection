@@ -1,10 +1,14 @@
+"""
+check_labels.py
+Script to join the images and labels produced by the Blender create_tree_auto.py
+"""
 import cv2
 import os
 
-# Define paths to the directory containing images and YOLO label files
-image_directory = '/Users/hannahgillespie/aod_detection/blender_automation/bark/renderings/images'  # Replace with the path to your images
-label_directory = '/Users/hannahgillespie/aod_detection/blender_automation/bark/renderings/labels'  # Replace with the path to your YOLO label files
-output_directory = '/Users/hannahgillespie/aod_detection/blender_automation/bark/renderings/output_images'  # Replace with the path to save images with bounding boxes
+## Path directory on local computer
+image_directory = '/Users/hannahgillespie/aod_detection/blender_automation/bark/renderings/images' 
+label_directory = '/Users/hannahgillespie/aod_detection/blender_automation/bark/renderings/labels'  
+output_directory = '/Users/hannahgillespie/aod_detection/blender_automation/bark/renderings/output_images' 
 
 # Define colors for each class
 class_colors = {
@@ -20,11 +24,10 @@ os.makedirs(output_directory, exist_ok=True)
 # Loop through all label files in the label directory
 for label_file in os.listdir(label_directory):
     if label_file.endswith('.txt'):
-        # Read the corresponding image file
-        image_name = label_file.replace('.txt', '.png')  # Adjust if images have a different format
+        image_name = label_file.replace('.txt', '.png')  
         image_path = os.path.join(image_directory, image_name)
 
-        # Check if the image exists
+        # Make sure image exists
         if not os.path.exists(image_path):
             print(f"Image {image_path} not found, skipping...")
             continue
@@ -54,11 +57,10 @@ for label_file in os.listdir(label_directory):
                 y2 = int(y_center_abs + box_height_abs / 2)
 
                 # Get the color for the bounding box based on class
-                color = class_colors.get(class_id, (255, 255, 255))  # Default to white if class_id is not found
+                color = class_colors.get(class_id, (255, 255, 255)) # else put white
 
                 # Draw the bounding box on the image
                 cv2.rectangle(image, (x1, y1), (x2, y2), color, 2)
-                # Optional: Put the class label on the bounding box
                 cv2.putText(image, f'Class {class_id}', (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 1)
 
         # Save the image with the bounding box to the output directory

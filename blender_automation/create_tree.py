@@ -34,8 +34,6 @@ def delete_object(object_name):
     bpy.context.view_layer.objects.active = obj
     bpy.ops.object.delete()
 
-import bpy
-
 # Function to append an existing material to a node in an MTree
 def append_material_to_mtree(node_group_name, node_name, material_name):
     # Get the MTree node tree

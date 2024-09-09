@@ -246,6 +246,12 @@ def set_day_environment_texture():
     print("Set sky texture environment background.")
 
 def set_random_background(camera):
+    """
+    Set a random background from the background directory.
+    
+    Args:
+    - camera: Blender camera object pointing to trunk at random location. 
+    """
     # Set a generic day environment texture first
     set_day_environment_texture()
     
@@ -443,3 +449,5 @@ if __name__ == "__main__":
     """Run in Blender 2.8."""
     enable_mtree_addon()
     create_n_random_trees(number_of_trees=N_TREES)
+
+
