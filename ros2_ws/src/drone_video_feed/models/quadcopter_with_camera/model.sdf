@@ -83,5 +83,18 @@
         </plugin>
       </sensor>
     </link>
+
+        <!-- Joint to control up and down movement -->
+    <joint name="base_link_joint" type="prismatic">
+      <parent>world</parent>
+      <child>base_link</child>
+      <axis>
+        <xyz>0 0 1</xyz> <!-- Z-axis for up/down movement -->
+        <limit>
+          <lower>-5.0</lower>  <!-- Allow up to 5 meters down -->
+          <upper>5.0</upper>   <!-- Allow up to 5 meters up -->
+        </limit>
+      </axis>
+    </joint>
   </model>
 </sdf>

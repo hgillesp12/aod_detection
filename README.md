@@ -1,17 +1,17 @@
 # aod_detection
 Thesis for detecting Acute Oak Decline (AOD) in oak trees across the UK using object detection. 
 
-## run simulation
-```bash
-ros2 launch drone_video_feed launch.py
-```
+## Google Drive Link
+Please access the Google Drive link for all other resources:
+https://drive.google.com/drive/folders/1d1tS1PEgrRGv_fTEtfmvFfJ5abwboc1l?usp=sharing
 
+`colab_notebooks` directory:
+- `video_replay.ipynb`: applies model and runs inference on input video, saves processed videos in sample_videos directory
+- `augment_data.ipynb`: runs augmentation techniques on images and saves back to images folder
+- `y`olo_custom_model_training.ipynb`: builds custom yolov5 model based on yolov5s through transfer learning
 
-
-
-## Environment Set-Up
-- RoboStack (https://robostack.github.io/GettingStarted.html)
-
+## Create Local ROS2_ENV Environment 
+Source: RoboStack (https://robostack.github.io/GettingStarted.html)
 ```bash
 # create and activate ROS environment
 conda create -n ros_env python=3.10
@@ -33,6 +33,7 @@ conda install compilers cmake pkg-config make ninja colcon-common-extensions cat
 conda install ros-humble-gazebo-ros-pkgs ros-humble-gazebo-ros
 ```
 
+### Reset setup.bash
 The `install/setup.bash` script can be set:
 ```bash
 # This script extends the environment with the environment of other prefix
@@ -63,4 +64,12 @@ _colcon_prefix_chain_bash_source_script "$COLCON_CURRENT_PREFIX/local_setup.bash
 
 unset COLCON_CURRENT_PREFIX
 unset _colcon_prefix_chain_bash_source_script
+```
+
+## Run Simulation
+```bash
+conda activate ros2_env
+source install/setup.bash
+colcon build
+ros2 launch drone_video_feed launch.py
 ```
