@@ -2,8 +2,7 @@
 Thesis for detecting Acute Oak Decline (AOD) in oak trees across the UK using object detection. 
 
 ## Google Drive Link
-Please access the Google Drive link for all other resources:
-https://drive.google.com/drive/folders/1d1tS1PEgrRGv_fTEtfmvFfJ5abwboc1l?usp=sharing
+Please reach out to the account owner for access to the Google Drive containing raw data and other resources.
 
 `colab_notebooks` directory:
 - `video_replay.ipynb`: applies model and runs inference on input video, saves processed videos in sample_videos directory
